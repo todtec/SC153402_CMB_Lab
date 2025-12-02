@@ -545,48 +545,9 @@ $$\text{GC\%} = \frac{(\text{จำนวน G} + \text{จำนวน C})}{\te
 
 ---
 
-## ส่วนที่ 4: การส่งรายงานและเกณฑ์การประเมินผล
+## ส่วนที่ 4: แหล่งข้อมูลเพิ่มเติมและการอ่านเพิ่มเติม
 
-### 4.1 รูปแบบการส่งรายงาน
-
-นักศึกษาจะต้องจัดทำและส่งรายงานปฏิบัติการในรูปแบบ PDF หรือ Word document ประกอบด้วยส่วนต่อไปนี้:
-
-**1. Title Page**
-   - ชื่อปฏิบัติการ
-   - รหัสวิชาและชื่อรายวิชา
-   - ชื่อ-นามสกุล และรหัสนักศึกษา
-   - วันที่ทำปฏิบัติการ
-   - ชื่ออาจารย์ผู้สอน
-
-**2. Introduction**
-   - วัตถุประสงค์ของการทดลอง (สรุปย่อ)
-   - ความสำคัญของ bioinformatics และ sequence databases
-
-**3. Materials and Methods**
-   - รายชื่อเครื่องมือและฐานข้อมูลที่ใช้ (NCBI, ORF Finder, ProtParam)
-   - สรุปขั้นตอนการทำงาน (ไม่ต้องระบุทุกขั้นตอนละเอียด)
-
-**4. Results**
-   - Exercise Set 3.1: แสดงตารางและข้อมูลที่บันทึกครบถ้วน
-   - รวม screenshots หรือ figures ที่เกี่ยวข้อง (GenBank records, ORF Finder output, ProtParam results, Hydropathy plot) พร้อม figure legends
-
-**5. Discussion**
-   - ตอบคำถามวิเคราะห์ทั้งหมดอย่างละเอียดและมีเหตุผล
-   - เชื่อมโยงผลที่ได้กับความรู้ทางทฤษฎีและการประยุกต์ใช้จริง
-   - อภิปรายข้อจำกัดของเครื่องมือที่ใช้ (ถ้ามี)
-
-**6. Conclusions**
-   - สรุปสิ่งที่เรียนรู้จากปฏิบัติการนี้
-   - ความสามารถที่ได้รับจากการฝึกปฏิบัติ
-
-**7. References**
-   - อ้างอิงแหล่งข้อมูลที่ใช้ (GenBank records, publications, web tools) ในรูปแบบมาตรฐาน
-
----
-
-## ส่วนที่ 5: แหล่งข้อมูลเพิ่มเติมและการอ่านเพิ่มเติม
-
-### 5.1 Web Resources และ Tutorials
+### 4.1 Web Resources และ Tutorials
 
 **NCBI Resources:**
 - NCBI Education: https://www.ncbi.nlm.nih.gov/home/learn/
@@ -604,7 +565,7 @@ $$\text{GC\%} = \frac{(\text{จำนวน G} + \text{จำนวน C})}{\te
 - EMBOSS Suite: http://emboss.sourceforge.net/
 - Sequence Manipulation Suite: http://www.bioinformatics.org/sms2/
 
-### 5.2 คำศัพท์สำคัญและคำจำกัดความ
+### 4.2 คำศัพท์สำคัญและคำจำกัดความ
 
 | คำศัพท์ | คำจำกัดความ |
 |---------|-------------|
