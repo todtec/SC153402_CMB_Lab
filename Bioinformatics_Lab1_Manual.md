@@ -160,15 +160,17 @@ GC content มีความสำคัญต่อ:
 #### 1.3.3 Protein Sequence Properties
 
 **Molecular Weight (MW)**: คำนวณจากผลรวมของ molecular weights ของกรดอะมิโนทั้งหมด หักด้วย molecular weight ของ water molecules ที่ถูกปลดปล่อยระหว่าง peptide bond formation
+- ประมาณขนาดของโปรตีน: ใช้เทียบตำแหน่งของแถบโปรตีนในการทำ SDS-PAGE หรือ Western Blot ว่าโปรตีนที่เราสนใจควรจะปรากฏที่ขนาดเท่าไหร่
+- การกรองโมเลกุล: ใช้เลือกขนาดของไส้กรอง (Cut-off filter) หรือชนิดของเรซินในการทำ Gel Filtration Chromatography
 
 **Theoretical Isoelectric Point (pI)**: ค่า pH ที่โปรตีนมี net charge เป็นศูนย์ ขึ้นอยู่กับองค์ประกอบของกรดอะมิโนที่มีกลุ่ม ionizable คุณสมบัตินี้มีความสำคัญต่อ:
-- Isoelectric focusing (IEF)
-- Ion exchange chromatography
-- Protein solubility และ crystallization
+- Isoelectric focusing (IEF): ใช้ในเทคนิคแยกโปรตีนตามค่า pI บนเจลที่มี pH gradient
+- Ion exchange chromatography: ใช้เลือกชนิดของ Buffer และ Resin ถ้า pH ของสารละลายต่ำกว่า pI โปรตีนจะมีประจุบวก (จับกับ Cation exchange resin) แต่ถ้า pH สูงกว่า pI โปรตีนจะมีประจุลบ (จับกับ Anion exchange resin)
+- Protein solubility และ crystallization: โดยทั่วไปโปรตีนจะละลายน้ำได้น้อยที่สุดเมื่ออยู่ในสภาพ pH เท่ากับค่า pI ของมัน (เพราะไม่มีประจุผลักกัน ทำให้โปรตีนจับตัวกันตกตะกอน) นักวิจัยจึงมักเลี่ยงค่า pH นี้หากต้องการให้โปรตีนละลาย หรือจงใจใช้ pH นี้หากต้องการตกตะกอนโปรตีน
 
-**GRAVY Score** (Grand Average of Hydropathicity): ค่าเฉลี่ยของ hydropathy values ของกรดอะมิโนทั้งหมดในโปรตีน (Kyte & Doolittle, 1982) ค่า GRAVY ที่เป็นบวกบ่งชี้ว่าโปรตีนมีลักษณะ hydrophobic ในขณะที่ค่าลบบ่งชี้ความเป็น hydrophilic
+**GRAVY Score** (Grand Average of Hydropathicity): เป็นค่าดัชนีที่บอกว่าโปรตีนตัวนั้น "เกลียดน้ำ" (Hydrophobic) หรือ "ชอบน้ำ" (Hydrophilic) โดยรวมมากแค่ไหน คำนวณจากการเฉลี่ยค่า Hydropathy (ตามเกณฑ์ของ Kyte & Doolittle, 1982) ของกรดอะมิโนทุกตัวในสาย
 
-**Instability Index**: พารามิเตอร์ที่ทำนายความเสถียรของโปรตีนใน vitro โดยโปรตีนที่มีค่า instability index มากกว่า 40 ถือว่าไม่เสถียร (Guruprasad et al., 1990)
+**Instability Index**: เป็นการคำนวณทางสถิติเพื่อทำนายว่าโปรตีนนี้จะมีความ "เสถียร" (Stable) หรือ "สลายตัวง่าย" (Unstable) เมื่ออยู่ในหลอดทดลอง (in vitro)
 
 ---
 
@@ -414,19 +416,6 @@ $$\text{GC\%} = \frac{(\text{จำนวน G} + \text{จำนวน C})}{\te
   - GRAVY > 0: โปรตีนมีลักษณะ hydrophobic (membrane proteins)
   - GRAVY < 0: โปรตีนมีลักษณะ hydrophilic (soluble proteins)
 
-**ขั้นตอนที่ 4: การวิเคราะห์เชิงลึก**
-
-4.1 คลิกที่ลิงก์ "Amino acid scale" ภายในผลลัพธ์
-
-4.2 เลือก scale: "Kyte & Doolittle" (hydropathy scale)
-
-4.3 สังเกต hydropathy plot:
-   - Peak ที่เป็นบวก: hydrophobic regions
-   - Valley ที่เป็นลบ: hydrophilic regions
-   - ความยาวของ hydrophobic stretches (อาจบ่งชี้ transmembrane domains)
-
-4.4 สำหรับ hemoglobin beta: สังเกตว่ามี hydrophobic regions สั้น ๆ กระจายอยู่ สอดคล้องกับการเป็น globular protein ที่ละลายน้ำได้
-
 ---
 
 ## ส่วนที่ 3: แบบฝึกหัดและการประยุกต์ใช้
@@ -544,24 +533,15 @@ $$\text{GC\%} = \frac{(\text{จำนวน G} + \text{จำนวน C})}{\te
 
 **คำถามวิเคราะห์:**
 
-5. จากค่า theoretical pI หากต้องการทำ ion exchange chromatography เพื่อ purify โปรตีนนี้ที่ pH 7.4:
-   - โปรตีนจะมี net charge เป็นบวกหรือลบ?
-   - ควรเลือกใช้ anion exchanger หรือ cation exchanger? อธิบาย
-
-6. หากต้องการคำนวณความเข้มข้นของ purified protein โดยการวัด absorbance ที่ 280 nm และได้ค่า A₂₈₀ = 0.5 (ใช้ cuvette 1 cm path length) ความเข้มข้นของโปรตีนเป็นเท่าใด (หน่วย mg/mL)?
+5. หากต้องการคำนวณความเข้มข้นของ purified protein โดยการวัด absorbance ที่ 280 nm และได้ค่า A₂₈₀ = 0.5 (ใช้ cuvette 1 cm path length) ความเข้มข้นของโปรตีนเป็นเท่าใด (หน่วย mg/mL)?
    
    *สูตร:* 
    $$C (\text{mg/mL}) = \frac{A_{280} \times \text{MW (Da)}}{\varepsilon \text{ (M}^{-1}\text{cm}^{-1}\text{)}}$$
    
    (หมายเหตุ: 1 M = 1 mol/L; ต้องแปลงหน่วยอย่างเหมาะสม)
 
-7. จากค่า instability index และ GRAVY score:
-   - คาดการณ์ว่าโปรตีนนี้จะ express และ purify ได้ง่ายหรือยาก?
-   - โปรตีนนี้น่าจะเป็น membrane protein, cytoplasmic protein, หรือ secreted protein? อ้างอิงข้อมูลจาก GRAVY score ประกอบ
-
-8. วิเคราะห์ hydropathy plot (Kyte & Doolittle scale):
+6. วิเคราะห์ hydropathy plot (Kyte & Doolittle scale):
    - มี hydrophobic stretches ที่ยาวพอที่จะเป็น transmembrane domain (~ 20-25 residues) หรือไม่?
-   - สังเกตลวดลายของ hydrophobic/hydrophilic regions และเชื่อมโยงกับโครงสร้างและหน้าที่ของโปรตีน
 
 ---
 
