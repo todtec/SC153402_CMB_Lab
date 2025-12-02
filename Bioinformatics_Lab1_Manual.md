@@ -572,130 +572,6 @@ $$\text{GC\%} = \frac{(\text{จำนวน G} + \text{จำนวน C})}{\te
 
 ---
 
-### Exercise Set 3.2: Problem-Based Exercise - Unknown Sequence Identification
-
-**Scenario:** นักวิจัยได้รับ DNA sequence จากการทำ PCR แต่ไม่ทราบว่าเป็น gene อะไร ท่านในฐานะนักชีววิทยาระดับโมเลกุลจะต้องใช้เครื่องมือ bioinformatics ในการระบุ identity และวิเคราะห์คุณสมบัติของลำดับนี้
-
-**Unknown Sequence:**
-
-```
->Unknown_Sequence
-ATGGGTCTGAGCGGTGGCGCCGCCGCCAAGCGGCGGCCCCCCGCGCCGCTGCTGCTGCT
-GCTCGGGGCCCTCGGCTGCGCCATGGGGGAGCTGCCCCCCAGCGGTTTCTTTGACGGGG
-ACAAGGCCTTCCTGCAGAAGGAGAATTATGCTGTTCCCGTCCATGCCTTGACCCGGGAG
-AACGGTGAGCTGCTGATCGACAAGAACATGGAGAAGGACCCCGCGTTCCAGAAGTACTT
-CCAGTCCACGGACTACTACGCCAACGGACTGAAGGACTACCTGGAGCGCAAGGAGGCCA
-TCAAGGGCAAGAACGTGCTGCCCATCTTCGACACGAAGGACGAGGACGACGGCAAGGGC
-TTCATCAAGGAGATGGTGATCAAGGGTTTCAAGGTGTGGGAGAAGTACGAGGACGGCGG
-CATTGTGACCATTGAGCAGGACGGCAGCTTCATCTACAAGGTGAAGTTCATCGGCACCAA
-CTTCCCCCCGGATGGCCCGGTGATGCAGAAGAAGACCATGGGCTGGGAGGCCTCCACCG
-AGCGCCTGTACCCGCGCGATGGCGTGCTGAAGGGCGAGATCAAGCAGAGGCTGAAGCTG
-AAGGACGGCGGCCACTACCTGGTGGAGTTCAAGACCATCTACATGGCCAAGAAGCCGGT
-GCAGCTGCCCGGCTACTACTACGTGGACTCCCGCCTGGAGCGCGGCAGCTTCCACCTCT
-GCTCCATGGTGATGATGGGCGGCAGCTTGACACCGGGCTGGGGAGAGGTGTACCAGTCG
-GACATGACCATGAGGGTGAATACCGCCGCCCCGGAGGCCGCCTGA
-```
-
-#### Tasks:
-
-**Task 1: Basic Sequence Characterization**
-
-1. ใช้ NCBI BLAST (BLASTn - nucleotide BLAST) ค้นหา identity ของลำดับนี้
-   - เข้าสู่ https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch
-   - Paste sequence ลงใน input box
-   - เลือก database: "Nucleotide collection (nr/nt)"
-   - คลิก "BLAST"
-
-2. จากผลลัพธ์ BLAST บันทึกข้อมูล hit อันดับ 1 (best match):
-
-| Parameter | Value |
-|-----------|-------|
-| Gene Name | |
-| Organism | |
-| Accession Number | |
-| Query Coverage (%) | |
-| Percent Identity (%) | |
-| E-value | |
-
-**คำถามวิเคราะห์:**
-
-9. E-value มีความหมายว่าอะไร? ค่า E-value ที่ได้บ่งชี้ว่าผลลัพธ์นี้มีความน่าเชื่อถือหรือไม่?
-
-10. Query coverage และ percent identity ที่ได้บ่งบอกอะไรเกี่ยวกับความสัมพันธ์ระหว่าง unknown sequence กับ hit ที่ดีที่สุด?
-
-**Task 2: Functional Analysis**
-
-3. ค้นหา Gene record ของ gene ที่ระบุได้จาก BLAST
-   
-4. อ่านข้อมูล functional annotation และบันทึก:
-   - Gene function (biological role)
-   - Pathway involvement (ถ้ามี)
-   - Tissue/cell type expression
-   - Clinical significance (ถ้ามี)
-
-**Task 3: Sequence Properties Analysis**
-
-5. คำนวณ/วิเคราะห์คุณสมบัติต่อไปนี้:
-
-| Property | Value | Method/Tool Used |
-|----------|-------|-----------------|
-| Sequence Length (bp) | | Direct count |
-| GC Content (%) | | GC calculator หรือ manual calculation |
-| Number of ORFs (length ≥ 75 nt) | | NCBI ORF Finder |
-| Longest ORF Length (aa) | | NCBI ORF Finder |
-| Predicted Protein MW (Da) | | ExPASy ProtParam |
-| Predicted Protein pI | | ExPASy ProtParam |
-
-**Task 4: Comparative Analysis**
-
-6. ทำ BLASTn เพื่อหา homologous sequences จากอย่างน้อย 3 organisms ที่แตกต่างกัน
-
-7. เปรียบเทียบ percent identity ระหว่าง organisms:
-
-| Organism | Common Name | Percent Identity (%) | Evolutionary Distance from Reference |
-|----------|-------------|---------------------|-------------------------------------|
-| | | | |
-| | | | |
-| | | | |
-
-**คำถามวิเคราะห์:**
-
-11. จากการเปรียบเทียบ percent identity ข้าม species อธิบายความสัมพันธ์เชิงวิวัฒนาการ (evolutionary conservation) ของ gene นี้
-
-12. Conservation ระดับสูงบ่งบอกอะไรเกี่ยวกับความสำคัญทางชีววิทยาของ gene นี้?
-
----
-
-### Exercise Set 3.3: Application Questions
-
-**คำถามเชิงประยุกต์และการคิดวิเคราะห์:**
-
-13. สมมติว่าท่านต้องการออกแบบ primers สำหรับ PCR amplification ของ gene ที่ท่านศึกษา:
-    - ข้อมูล GC content มีความสำคัญอย่างไร?
-    - ควรเลือกบริเวณใดของ gene เป็น primer binding sites (5' UTR, CDS, 3' UTR)? เพราะเหตุใด?
-    - หากต้องการ amplify เฉพาะ coding region ควรออกแบบ primers อย่างไร?
-
-14. ในการทำ recombinant protein expression:
-    - ข้อมูล codon usage มีความสำคัญอย่างไร (เชื่อมโยงกับ GC content)?
-    - ค่า pI ของโปรตีนมีผลต่อการเลือก purification strategy อย่างไร?
-    - Instability index สามารถช่วยทำนายปัญหาในการ express protein ได้หรือไม่?
-
-15. พิจารณาสถานการณ์: นักวิจัยพบว่าโปรตีนที่ purify ได้มีแนวโน้มเกิด precipitation ที่ pH 7.0
-    - การรู้ค่า theoretical pI ช่วยอธิบายปรากฏการณ์นี้ได้อย่างไร?
-    - ควรปรับ pH ของ buffer ไปในทิศทางใด (สูงขึ้นหรือต่ำลง) เพื่อเพิ่ม solubility?
-
-16. เปรียบเทียบข้อดีข้อเสียของการใช้:
-    - Primary databases (GenBank) vs. Secondary databases (UniProt)
-    - Web-based tools vs. Standalone software สำหรับ sequence analysis
-
-17. อธิบายความสำคัญของ accession number และ version number ในการอ้างอิงข้อมูลทางวิทยาศาสตร์
-
-18. หากพบว่าโปรตีนที่ศึกษามี GRAVY score เป็นค่าบวกสูง (เช่น +1.2) และมี prolonged hydrophobic stretches จาก hydropathy plot:
-    - โปรตีนนี้น่าจะ localize ที่ส่วนใดของเซลล์?
-    - มีข้อควรพิจารณาพิเศษอะไรในการทำ expression และ purification?
-
----
-
 ## ส่วนที่ 4: การส่งรายงานและเกณฑ์การประเมินผล
 
 ### 4.1 รูปแบบการส่งรายงาน
@@ -719,11 +595,10 @@ GACATGACCATGAGGGTGAATACCGCCGCCCCGGAGGCCGCCTGA
 
 **4. Results**
    - Exercise Set 3.1: แสดงตารางและข้อมูลที่บันทึกครบถ้วน
-   - Exercise Set 3.2: แสดงผลลัพธ์ BLAST พร้อม screenshots สำคัญ
    - รวม screenshots หรือ figures ที่เกี่ยวข้อง (GenBank records, ORF Finder output, ProtParam results, Hydropathy plot) พร้อม figure legends
 
 **5. Discussion**
-   - ตอบคำถามวิเคราะห์ทั้งหมด (คำถามที่ 1-18) อย่างละเอียดและมีเหตุผล
+   - ตอบคำถามวิเคราะห์ทั้งหมดอย่างละเอียดและมีเหตุผล
    - เชื่อมโยงผลที่ได้กับความรู้ทางทฤษฎีและการประยุกต์ใช้จริง
    - อภิปรายข้อจำกัดของเครื่องมือที่ใช้ (ถ้ามี)
 
@@ -777,28 +652,7 @@ GACATGACCATGAGGGTGAATACCGCCGCCCCGGAGGCCGCCTGA
 | **UTR (Untranslated Region)** | บริเวณใน mRNA ที่ไม่ถูกแปลเป็นโปรตีน แบ่งเป็น 5' UTR (upstream ของ start codon) และ 3' UTR (downstream ของ stop codon) มีบทบาทในการควบคุม translation และ mRNA stability |
 | **Version Number** | เลขหลังจุดใน accession number (เช่น .5 ใน NM_000518.5) เพิ่มขึ้นทุกครั้งที่มีการเปลี่ยนแปลง sequence แต่ไม่เปลี่ยนเมื่อแก้ annotation เพียงอย่างเดียว |
 
-### 5.3 เอกสารอ้างอิงหลัก
-
-Altschul, S.F., Gish, W., Miller, W., Myers, E.W., & Lipman, D.J. (1990). Basic local alignment search tool. *Journal of Molecular Biology*, 215(3), 403-410. https://doi.org/10.1016/S0022-2836(05)80360-2
-
-Benson, D.A., Cavanaugh, M., Clark, K., Karsch-Mizrachi, I., Lipman, D.J., Ostell, J., & Sayers, E.W. (2013). GenBank. *Nucleic Acids Research*, 41(D1), D36-D42. https://doi.org/10.1093/nar/gks1195
-
-Gasteiger, E., Hoogland, C., Gattiker, A., Duvaud, S., Wilkins, M.R., Appel, R.D., & Bairoch, A. (2005). Protein identification and analysis tools on the ExPASy server. In J.M. Walker (Ed.), *The Proteomics Protocols Handbook* (pp. 571-607). Humana Press. https://doi.org/10.1385/1-59259-890-0:571
-
-Guruprasad, K., Reddy, B.V., & Pandit, M.W. (1990). Correlation between stability of a protein and its dipeptide composition: a novel approach for predicting in vivo stability of a protein from its primary sequence. *Protein Engineering, Design and Selection*, 4(2), 155-161. https://doi.org/10.1093/protein/4.2.155
-
-Kyte, J., & Doolittle, R.F. (1982). A simple method for displaying the hydropathic character of a protein. *Journal of Molecular Biology*, 157(1), 105-132. https://doi.org/10.1016/0022-2836(82)90515-0
-
-Lesk, A.M. (2019). *Introduction to Bioinformatics* (5th ed.). Oxford University Press.
-
-Mount, D.W. (2007). *Bioinformatics: Sequence and Genome Analysis* (2nd ed.). Cold Spring Harbor Laboratory Press.
-
-O'Leary, N.A., Wright, M.W., Brister, J.R., et al. (2016). Reference sequence (RefSeq) database at NCBI: current status, taxonomic expansion, and functional annotation. *Nucleic Acids Research*, 44(D1), D733-D745. https://doi.org/10.1093/nar/gkv1189
-
-The UniProt Consortium. (2023). UniProt: the Universal Protein Knowledgebase in 2023. *Nucleic Acids Research*, 51(D1), D523-D531. https://doi.org/10.1093/nar/gkac1052
-
 ---
-
 
 **เอกสารประกอบการสอนฉบับนี้จัดทำโดย:** อ.ทศพล เตโช 
 **สถาบัน:** สาขาวิชาชีววิทยา คณะวิทยาศาสตร์ มหาวิทยาลัยขอนแก่น
